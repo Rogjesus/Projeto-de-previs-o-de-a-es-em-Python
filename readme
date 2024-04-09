@@ -1,0 +1,37 @@
+# Projeto de Interpolação e Normalização de Dados
+
+Este projeto contém um script Python que realiza a interpolação e normalização de dados em arquivos CSV.
+
+## Dependências
+
+O script depende das seguintes bibliotecas Python:
+
+- os
+- sys
+- pandas
+
+Além disso, depende de dois módulos personalizados:
+
+- interpolation
+- normalization
+
+## Como usar
+
+Para usar este script, você precisa fornecer dois argumentos na linha de comando:
+
+1. O diretório que contém os arquivos CSV a serem processados.
+2. O diretório onde os arquivos CSV processados devem ser salvos.
+
+Por exemplo:
+
+```bash
+python main.py /caminho/para/diretorio/entrada /caminho/para/diretorio/saida
+
+Processo
+O script realiza as seguintes etapas:
+
+Lista todos os arquivos no diretório de entrada.
+Para cada arquivo, ele lê o conteúdo em um DataFrame do pandas.
+Realiza a interpolação nas colunas ‘high’, ‘open’, ‘low’, ‘close’, ‘volume’ e ‘adj_close’.
+Realiza a normalização nas mesmas colunas.
+Salva o DataFrame processado no diretório de saída com o mesmo nome do arquivo original.
